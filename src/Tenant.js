@@ -2,18 +2,21 @@ import React from 'react';
 
 function Tenant({ tenant }) {
     //if (tenants === []) return <h3>Loading...</h3>
-    const {id, ref, fname, lname, address, mobile, email, note} = tenant
+    const {id, ref, address, fname, lname, mobile, email, term, sdate, edate, note} = tenant
     return (
-        <div>
-            <p>Ref: {ref}</p>
-            <p>Name: {fname +' ' + lname}</p>
-            <p>address: {address}</p>
-            <p>mobile: {mobile}</p>
-            <p>email: {email}</p>
-            <p>note: {note}</p>
-            <button>close</button>
+        <tr>
+            <td>{ref}</td>
+            <td>{address}</td>
+            <td>{fname + " " +lname}</td>
+            <td>{mobile}</td>
+            <td>{email}</td>
+            <td>{term} months</td>
+            <td>{sdate}</td>
+            <td>{edate}</td>
+            <td>{note}</td>
+            <button>Delete</button>
             <button>Edit</button>
-        </div>
+        </tr>
     )
 }
 
