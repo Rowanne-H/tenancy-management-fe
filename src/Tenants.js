@@ -1,10 +1,12 @@
 import React from 'react';
-
+import Tenant from './Tenant';
 
 function Tenants({ tenants }) {
     if (tenants === []) return <h3>Loading...</h3>
     return (
-        <h3>Tenants</h3>
+        <div>
+            {tenants.map(tenant => <Tenant key={tenant.id} tenant={tenant}/>)}
+        </div>
     )
 }
 
