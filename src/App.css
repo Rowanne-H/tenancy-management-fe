@@ -5,6 +5,25 @@
   box-sizing: border-box;
 }
 
+nav {
+  background-color: rgb(233, 244, 247);
+}
+
+nav a {
+  display: inline-block;
+  margin: 10px;
+  font-size: 20pt;
+}
+
+nav a:hover,
+nav a:active {
+  color: rgb(164, 164, 242);
+}
+
+nav a.active {
+  background-color: rgb(210, 210, 244);
+}
+
 form {
   width: 25%;
   background-color: rgb(233, 244, 247);
