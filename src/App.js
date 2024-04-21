@@ -1,5 +1,8 @@
+import React from "react";
+import { Route, Switch } from "react-router-dom";
 import Home from './Home';
 import Tenants from './Tenants';
+import NavBar from './NavBar';
 import './App.css';
 
 
@@ -9,8 +12,18 @@ function App() {
   }]
   return (
     <div className="App">
-      <Home />
-      <Tenants tenants={tenants} />
+      <NavBar />
+      <Switch>
+        <Route exact path="/">
+          <Home />
+        </Route>
+        <Route path="/tenants">
+          <Tenants tenants={tenants}/>
+        </Route>
+        <Route path="/tenants/new">
+          <Tenants tenants={tenants}/>
+        </Route>
+      </Switch>
     </div>
   );
 }
