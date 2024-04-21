@@ -7,8 +7,9 @@
 
 form {
   width: 25%;
-  background-color: rgb(224, 224, 132);
-  margin: auto
+  background-color: rgb(233, 244, 247);
+  margin: auto;
+  border-radius: 5px;
 }
 
 label {
