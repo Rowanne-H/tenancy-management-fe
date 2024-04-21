@@ -3,6 +3,7 @@ import { Route, Switch } from "react-router-dom";
 import Home from './Home';
 import Tenants from './Tenants';
 import NavBar from './NavBar';
+import TenantForm from './TenantForm';
 import './App.css';
 
 
@@ -15,13 +16,13 @@ function App() {
       <NavBar />
       <Switch>
         <Route exact path="/">
-          <Home />
+        <Home />
         </Route>
-        <Route path="/tenants">
+        <Route exact path="/tenants">
           <Tenants tenants={tenants}/>
         </Route>
-        <Route path="/tenants/new">
-          <Tenants tenants={tenants}/>
+        <Route exact path="/tenants/new">
+          <TenantForm />
         </Route>
       </Switch>
     </div>
