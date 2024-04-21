@@ -9,8 +9,12 @@ import './App.css';
 
 function App() {
   const tenants =[{
-    id: 1, ref: "123John", address: "123 gogo st gggg ", fname: "John", lname: "Ou",  mobile: "0403123456", email:"1@gmail.com", term: "12", sdate: "12-2-1990", edate: "12-2-2055", note:""
+    id: 1, ref: "123John", property: "123 gogo st gggg ", fname: "John", lname: "Ou",  mobile: "0403123456", email:"1@gmail.com", term: "12", sdate: "12-2-1990", edate: "12-2-2055", note:""
   }]
+  const tenant = {
+    id: 1, ref: "123John", property: "123 gogo st gggg ", fname: "John", lname: "Ou",  mobile: "0403123456", email:"1@gmail.com", term: "12", sdate: "12-2-1990", edate: "12-2-2055", note:""
+  }
+  
   return (
     <div className="App">
       <NavBar />
@@ -22,7 +26,7 @@ function App() {
           <Tenants tenants={tenants}/>
         </Route>
         <Route exact path="/tenants/new">
-          <TenantForm />
+          <TenantForm etenant={tenant}/>
         </Route>
       </Switch>
     </div>

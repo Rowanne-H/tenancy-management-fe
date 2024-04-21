@@ -7,7 +7,7 @@ function Tenants({ tenants }) {
         <table>
             <tr>
                 <th>Ref</th>
-                <th>Address</th>
+                <th>Property</th>
                 <th>Name</th>
                 <th>Mobile</th>
                 <th>Email</th>

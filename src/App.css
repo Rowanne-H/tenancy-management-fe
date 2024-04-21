@@ -26,20 +26,25 @@ button {
 }
 
 form {
-  width: 25%;
+  width: 30%;
   margin: auto;
+  margin-top: 20px;
 }
 
 label {
+  margin-left: 10px;
   display: flex;
-  flex-direction: column;
-  margin: 10px;
+  align-items: center
 }
+
 
 input {
   line-height: 2;
   padding: 0 5px 0 5px;
+  margin: 10px;
   border: none;
+  flex-grow: 1;
+  margin-left: 5px;
 }
 
 button {
