@@ -30,7 +30,21 @@ function TenantForm({ etenant }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        console.log(tenant)
+        if (etenant !== undefined) {
+            console.log('change code later')
+        } else {
+            fetch(`https://tenancy-management-be.onrender.com/tenants`, {
+                method: "POST",
+                headers: {
+                    'Accept': 'application/json',
+                    "Content-Type": "application/json",
+                },
+                body: JSON.stringify(tenant),
+            })
+                .then(r => r.json())
+                .then(newTenant => console.log(newTenant));
+        }
+        document.querySelector('form').reset();
     } 
     
     return (
@@ -45,7 +59,7 @@ function TenantForm({ etenant }) {
                 <input type="text" id="fname" placeholder="e.g. John" onChange={handleChange} value={tenant.fname}/>
             </label> 
             <label> Last Name:
-                <input type="text" id="lname" placeholder="e.g. John" onChange={handleChange} value={tenant.lname}/>
+                <input type="text" id="lname" placeholder="e.g. Doe" onChange={handleChange} value={tenant.lname}/>
             </label> 
             <label> Mobile:
                 <input type="tel" id="mobile" pattern="04[0-9]{8}" placeholder="e.g. 0400111000" onChange={handleChange} value={tenant.mobile}/>

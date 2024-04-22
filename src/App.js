@@ -26,7 +26,7 @@ function App() {
           <Tenants tenants={tenants}/>
         </Route>
         <Route exact path="/tenants/new">
-          <TenantForm etenant={tenant}/>
+          <TenantForm />
         </Route>
       </Switch>
     </div>
