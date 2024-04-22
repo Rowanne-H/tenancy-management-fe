@@ -2,6 +2,7 @@ import React from 'react';
 
 function Tenant({ tenant, onDeleteTenant }) {
     const {id, ref, property, fname, lname, mobile, email, term, sdate, edate, note} = tenant
+    
     function handleDeleteClick() {
         fetch(`https://tenancy-management-be.onrender.com/tenants/${id}`, {
             method: "DELETE",
@@ -9,6 +10,7 @@ function Tenant({ tenant, onDeleteTenant }) {
             .then(r => r.json())
             .then(() => onDeleteTenant(id));
     }
+
     return (
         <tr>
             <td>{ref}</td>
