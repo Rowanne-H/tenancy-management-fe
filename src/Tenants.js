@@ -17,7 +17,7 @@ function Tenants({ tenants, deleteTenant }) {
                     <th>Note</th>
                     <th>More</th>
                 </tr>
-                {tenants.map(tenant => <Tenant key={tenant.id} tenant={tenant} onDeleteTenant={deleteTenant}/>)}
+                {tenants.map(tenant => <Tenant key={tenant.id} tenant={tenant} onDeleteTenant={deleteTenant} />)}
             </tbody>
         </table>
     )

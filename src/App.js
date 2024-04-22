@@ -36,25 +36,25 @@ function App() {
   }
 
   if (tenants === []) return <h3>Loading...</h3>
-  
+
   return (
     <div className="App">
       <NavBar />
       <Switch>
         <Route exact path="/">
-        <Home />
+          <Home />
         </Route>
         <Route exact path="/tenants">
-          <Tenants tenants={tenants} deleteTenant={deleteTenant}/>
+          <Tenants tenants={tenants} deleteTenant={deleteTenant} />
         </Route>
         <Route exact path="/tenants/new">
-          <TenantForm onAddNewTenant={addNewTenant}/>
+          <TenantForm onAddNewTenant={addNewTenant} />
         </Route>
         <Route exact path="/tenants/:id">
           <TenantDetails />
         </Route>
         <Route exact path="/tenants/:id/edit">
-          <EditTenantForm onUpdateTenant={updateTenant}/>
+          <EditTenantForm onUpdateTenant={updateTenant} />
         </Route>
       </Switch>
     </div>

@@ -1,8 +1,8 @@
 import React from 'react';
-import {NavLink} from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
 
 function Tenant({ tenant, onDeleteTenant }) {
-    const {id, ref, property, fname, lname, mobile, email, term, sdate, edate, note} = tenant
+    const { id, ref, property, fname, lname, mobile, email, term, sdate, edate, note } = tenant
 
     function handleDeleteClick() {
         fetch(`https://tenancy-management-be.onrender.com/tenants/${id}`, {
@@ -19,7 +19,7 @@ function Tenant({ tenant, onDeleteTenant }) {
         <tr>
             <td>{ref}</td>
             <td>{property}</td>
-            <td>{fname + " " +lname}</td>
+            <td>{fname + " " + lname}</td>
             <td>{mobile}</td>
             <td>{email}</td>
             <td>{term} months</td>
@@ -31,7 +31,6 @@ function Tenant({ tenant, onDeleteTenant }) {
                 <NavLink className="more" to={`/tenants/${id}/edit`}>Edit</NavLink>
                 <NavLink className="more" to={`/tenants`} onClick={handleDeleteClick}>Delete</NavLink>
             </td>
-            
         </tr>
     )
 }
