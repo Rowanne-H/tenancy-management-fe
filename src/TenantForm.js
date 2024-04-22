@@ -15,15 +15,18 @@ function TenantForm({ onAddNewTenant }) {
     function handleSubmit(e) {
         e.preventDefault();
         fetch("https://tenancy-management-be.onrender.com/tenants", {
-                method: "POST",
-                headers: {
-                    'Accept': 'application/json',
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(tenant),
-            })
-                .then(r => r.json())
-                .then(newTenant => onAddNewTenant(newTenant));
+            method: "POST",
+            headers: {
+                'Accept': 'application/json',
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(tenant),
+        })
+            .then(r => r.json())
+            .then(newTenant => {
+                onAddNewTenant(newTenant)
+                alert(newTenant.fname + " " + newTenant.lname + " has been saved!")
+            });
         form.reset();
     } 
     
