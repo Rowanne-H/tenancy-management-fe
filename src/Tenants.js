@@ -16,6 +16,7 @@ function Tenants({ tenants, addNewTenant }) {
                     <th>Start Date</th>
                     <th>End Date</th>
                     <th>Note</th>
+                    <th>More</th>
                 </tr>
                 {tenants.map(tenant => <Tenant key={tenant.id} tenant={tenant} />)}
             </tbody>

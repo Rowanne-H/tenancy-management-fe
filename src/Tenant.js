@@ -1,7 +1,6 @@
 import React from 'react';
 
 function Tenant({ tenant }) {
-    //if (tenants === []) return <h3>Loading...</h3>
     const {id, ref, property, fname, lname, mobile, email, term, sdate, edate, note} = tenant
     return (
         <tr>
@@ -14,8 +13,12 @@ function Tenant({ tenant }) {
             <td>{sdate}</td>
             <td>{edate}</td>
             <td>{note}</td>
-            <button>Delete</button>
-            <button>Edit</button>
+            <td>
+                <button>View</button>
+                <button>Edit</button>
+                <button>Delete</button>
+            </td>
+            
         </tr>
     )
 }
