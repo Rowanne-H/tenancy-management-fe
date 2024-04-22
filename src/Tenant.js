@@ -1,13 +1,13 @@
 import React from 'react';
 
-function Tenant({ tenant }) {
+function Tenant({ tenant, onDeleteTenant }) {
     const {id, ref, property, fname, lname, mobile, email, term, sdate, edate, note} = tenant
     function handleDeleteClick() {
         fetch(`https://tenancy-management-be.onrender.com/tenants/${id}`, {
             method: "DELETE",
         })
             .then(r => r.json())
-            .then(() => console.log("deleted!"));
+            .then(() => onDeleteTenant(id));
     }
     return (
         <tr>

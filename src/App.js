@@ -18,6 +18,10 @@ function App() {
   function addNewTenant(newTenant) {
     setTenants([...tenants, newTenant])
   }
+
+  function deleteTenant(id) {
+    setTenants(tenants.filter(tenant => tenant.id !== id))
+  }
   
   const tenant = {
     id: 1, ref: "123John", property: "123 gogo st gggg ", fname: "John", lname: "Ou",  mobile: "0403123456", email:"1@gmail.com", term: "12", sdate: "12-2-1990", edate: "12-2-2055", note:""
@@ -33,7 +37,7 @@ function App() {
         <Home />
         </Route>
         <Route exact path="/tenants">
-          <Tenants tenants={tenants }/>
+          <Tenants tenants={tenants} deleteTenant={deleteTenant}/>
         </Route>
         <Route exact path="/tenants/new">
           <TenantForm onAddNewTenant={addNewTenant}/>
