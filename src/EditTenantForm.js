@@ -1,16 +1,18 @@
 import React, {useEffect, useState} from 'react';
 import { useParams } from 'react-router-dom';
+import { useHistory } from 'react-router-dom';
 
-function EditTenantForm({ onAddNewTenant }) {
+function EditTenantForm({ onUpdateTenant }) {
     let form=document.querySelector('form');
     const [tenant, setTenant] = useState(null);
     const {id} = useParams();
+    const history = useHistory();
     
     useEffect(() => {
         fetch(`https://tenancy-management-be.onrender.com/tenants/${id}`)
                 .then(r => r.json())
-                .then(etenant => {
-                    setTenant(etenant)
+                .then(tenant => {
+                    setTenant(tenant)
                 });
     }, [])
 
@@ -26,21 +28,18 @@ function EditTenantForm({ onAddNewTenant }) {
 
     function handleSubmit(e) {
         e.preventDefault();
-        if (!tenant) {
-            console.log('change code later')
-        } else {
-            fetch("https://tenancy-management-be.onrender.com/tenants", {
-                method: "POST",
-                headers: {
-                    'Accept': 'application/json',
-                    "Content-Type": "application/json",
-                },
-                body: JSON.stringify(tenant),
-            })
-                .then(r => r.json())
-                .then(newTenant => onAddNewTenant(newTenant));
-        }
-        form.reset();
+        fetch(`https://tenancy-management-be.onrender.com/tenants/${id}`, {
+            method: "PATCH",
+            headers: {
+                "Content-Type": "application/json",
+            },
+            body: JSON.stringify(tenant),
+        })
+            .then(r => r.json())
+            .then(updatedTenant => {
+                onUpdateTenant(updatedTenant)
+                history.push(`/tenants/${id}`)
+            });
     } 
     
     return (

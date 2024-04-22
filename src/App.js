@@ -25,6 +25,16 @@ function App() {
     setTenants(tenants.filter(tenant => tenant.id !== id))
   }
 
+  function updateTenant(uTenant) {
+    setTenants(tenants.map(tenant => {
+      if (tenant.id === uTenant.id) {
+        return uTenant
+      } else {
+        return tenant
+      }
+    }))
+  }
+
   if (tenants === []) return <h3>Loading...</h3>
   
   return (
@@ -38,13 +48,13 @@ function App() {
           <Tenants tenants={tenants} deleteTenant={deleteTenant}/>
         </Route>
         <Route exact path="/tenants/new">
-          <TenantForm onAddNewTenant={addNewTenant} newTenantForm={true}/>
+          <TenantForm onAddNewTenant={addNewTenant}/>
         </Route>
         <Route exact path="/tenants/:id">
           <TenantDetails />
         </Route>
         <Route exact path="/tenants/:id/edit">
-          <EditTenantForm />
+          <EditTenantForm onUpdateTenant={updateTenant}/>
         </Route>
       </Switch>
     </div>
