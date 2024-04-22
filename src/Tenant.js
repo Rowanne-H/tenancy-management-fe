@@ -9,7 +9,10 @@ function Tenant({ tenant, onDeleteTenant }) {
             method: "DELETE",
         })
             .then(r => r.json())
-            .then(() => onDeleteTenant(id));
+            .then(() => {
+                onDeleteTenant(id)
+                alert(fname + " " + lname + " has been deleted")
+            });
     }
 
     return (
