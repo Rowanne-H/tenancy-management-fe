@@ -29,7 +29,7 @@ function Tenant({ tenant, onDeleteTenant }) {
             <td>
                 <NavLink className="more" to={`/tenants/${id}`}>View</NavLink>
                 <NavLink className="more" to={`/tenants/${id}/edit`}>Edit</NavLink>
-                <NavLink className="more" to={`/tenants/${id}`} onClick={handleDeleteClick}>Delete</NavLink>
+                <NavLink className="more" to={`/tenants`} onClick={handleDeleteClick}>Delete</NavLink>
             </td>
             
         </tr>

@@ -22,7 +22,7 @@ a:hover, a:active {
   color: rgb(85, 85, 185);
 }
 
-a.active, button {
+.navbar.active, button {
   background-color: rgb(210, 210, 244);
 }
 
