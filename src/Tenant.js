@@ -1,8 +1,9 @@
 import React from 'react';
+import {Link} from 'react-router-dom';
 
 function Tenant({ tenant, onDeleteTenant }) {
     const {id, ref, property, fname, lname, mobile, email, term, sdate, edate, note} = tenant
-    
+
     function handleDeleteClick() {
         fetch(`https://tenancy-management-be.onrender.com/tenants/${id}`, {
             method: "DELETE",
@@ -23,8 +24,8 @@ function Tenant({ tenant, onDeleteTenant }) {
             <td>{edate}</td>
             <td>{note}</td>
             <td>
-                <button>View</button>
-                <button>Edit</button>
+                <Link to={`/tenants/${id}`}>View</Link>
+                <Link to={`/tenants/${id}/edit`}>Edit</Link>
                 <button onClick={handleDeleteClick}>Delete</button>
             </td>
             

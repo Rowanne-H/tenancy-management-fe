@@ -3,7 +3,9 @@ import { Route, Switch } from "react-router-dom";
 import Home from './Home';
 import Tenants from './Tenants';
 import NavBar from './NavBar';
+import TenantDetails from './TenantDetails';
 import TenantForm from './TenantForm';
+import EditTenantForm from './EditTenantForm';
 import './App.css';
 
 
@@ -40,7 +42,13 @@ function App() {
           <Tenants tenants={tenants} deleteTenant={deleteTenant}/>
         </Route>
         <Route exact path="/tenants/new">
-          <TenantForm onAddNewTenant={addNewTenant}/>
+          <TenantForm onAddNewTenant={addNewTenant} />
+        </Route>
+        <Route exact path="/tenants/:id">
+          <TenantDetails />
+        </Route>
+        <Route exact path="/tenants/:id/edit">
+          <EditTenantForm />
         </Route>
       </Switch>
     </div>
