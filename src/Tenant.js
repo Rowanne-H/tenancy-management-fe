@@ -29,7 +29,7 @@ function Tenant({ tenant, onDeleteTenant }) {
             <td>
                 <Link to={`/tenants/${id}`}>View</Link>
                 <Link to={`/tenants/${id}/edit`}>Edit</Link>
-                <button onClick={handleDeleteClick}>Delete</button>
+                <Link to={`/tenants/${id}`} onClick={handleDeleteClick}>Delete</Link>
             </td>
             
         </tr>
