@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from 'react';
 
 function TenantForm({ etenant }) {
+    let form=document.querySelector('form');
     const [tenant, setTenant] = useState({
         ref: "", 
         property: "", 
@@ -33,7 +34,7 @@ function TenantForm({ etenant }) {
         if (etenant !== undefined) {
             console.log('change code later')
         } else {
-            fetch(`https://tenancy-management-be.onrender.com/tenants`, {
+            fetch("https://tenancy-management-be.onrender.com/tenants", {
                 method: "POST",
                 headers: {
                     'Accept': 'application/json',
@@ -44,7 +45,7 @@ function TenantForm({ etenant }) {
                 .then(r => r.json())
                 .then(newTenant => console.log(newTenant));
         }
-        document.querySelector('form').reset();
+        form.reset();
     } 
     
     return (
