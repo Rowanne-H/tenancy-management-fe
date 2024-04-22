@@ -1,5 +1,5 @@
 import React from 'react';
-import {Link} from 'react-router-dom';
+import {NavLink} from 'react-router-dom';
 
 function Tenant({ tenant, onDeleteTenant }) {
     const {id, ref, property, fname, lname, mobile, email, term, sdate, edate, note} = tenant
@@ -27,9 +27,9 @@ function Tenant({ tenant, onDeleteTenant }) {
             <td>{edate}</td>
             <td>{note}</td>
             <td>
-                <Link to={`/tenants/${id}`}>View</Link>
-                <Link to={`/tenants/${id}/edit`}>Edit</Link>
-                <Link to={`/tenants/${id}`} onClick={handleDeleteClick}>Delete</Link>
+                <NavLink className="more" to={`/tenants/${id}`}>View</NavLink>
+                <NavLink className="more" to={`/tenants/${id}/edit`}>Edit</NavLink>
+                <NavLink className="more" to={`/tenants/${id}`} onClick={handleDeleteClick}>Delete</NavLink>
             </td>
             
         </tr>

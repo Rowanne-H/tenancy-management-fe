@@ -9,20 +9,25 @@ nav, form, th {
   background-color: rgb(233, 244, 247);
 }
 
-nav a {
-  display: inline-block;
-  margin: 10px;
+.navbar {
   font-size: 20pt;
+  margin: 10px;
 }
 
-nav a:hover,
-nav a:active {
+a {
+  display: inline-block;
+}
+
+a:hover, a:active {
   color: rgb(85, 85, 185);
 }
 
-nav a.active, 
-button {
+a.active, button {
   background-color: rgb(210, 210, 244);
+}
+
+.more {
+  margin: 5px;
 }
 
 form {
@@ -36,7 +41,6 @@ label {
   display: flex;
   align-items: center
 }
-
 
 input {
   line-height: 2;
