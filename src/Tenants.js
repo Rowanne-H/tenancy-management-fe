@@ -1,7 +1,7 @@
 import React from 'react';
 import Tenant from './Tenant';
 
-function Tenants({ tenants }) {
+function Tenants({ tenants, addNewTenant }) {
     if (tenants === []) return <h3>Loading...</h3>
     return (
         <table>
@@ -17,7 +17,7 @@ function Tenants({ tenants }) {
                     <th>End Date</th>
                     <th>Note</th>
                 </tr>
-                {tenants.map(tenant => <Tenant key={tenant.id} tenant={tenant}/>)}
+                {tenants.map(tenant => <Tenant key={tenant.id} tenant={tenant} />)}
             </tbody>
         </table>
     )

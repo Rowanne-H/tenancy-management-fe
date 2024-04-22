@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react';
 
-function TenantForm({ etenant }) {
+function TenantForm({ etenant, onAddNewTenant }) {
     let form=document.querySelector('form');
     const [tenant, setTenant] = useState({
         ref: "", 
@@ -43,7 +43,7 @@ function TenantForm({ etenant }) {
                 body: JSON.stringify(tenant),
             })
                 .then(r => r.json())
-                .then(newTenant => console.log(newTenant));
+                .then(newTenant => onAddNewTenant(newTenant));
         }
         form.reset();
     } 
