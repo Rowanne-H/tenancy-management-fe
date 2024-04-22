@@ -26,11 +26,15 @@ function TenantForm({ etenant }) {
             ...tenant,
             [key]: e.target.value
         })
-        console.log(tenant)
     }
+
+    function handleSubmit(e) {
+        e.preventDefault();
+        console.log(tenant)
+    } 
     
     return (
-        <form>
+        <form onSubmit={handleSubmit}>
             <label> Ref:
                 <input type="text" id="ref" placeholder="e.g. 123John" onChange={handleChange} value={tenant.ref}/>
             </label> 

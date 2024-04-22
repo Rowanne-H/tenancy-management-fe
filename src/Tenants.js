@@ -5,6 +5,7 @@ function Tenants({ tenants }) {
     if (tenants === []) return <h3>Loading...</h3>
     return (
         <table>
+            <tbody>
             <tr>
                 <th>Ref</th>
                 <th>Property</th>
@@ -17,6 +18,7 @@ function Tenants({ tenants }) {
                 <th>Note</th>
             </tr>
             {tenants.map(tenant => <Tenant key={tenant.id} tenant={tenant}/>)}
+            </tbody>
         </table>
     )
 }
