@@ -3,7 +3,9 @@ The Tenancy Management System is an app for clients to keep tenants records.
 ### `Components`
 #### Home
 A description for this app
-\**Route: https://tenancy-management-be.onrender.com/**\
+\
+**Route: https://tenancy-management-be.onrender.com/**
+\
 #### Tenants
 A list for all tenants with options for you to view selected tenant's details, edit selected tenant and delete selected tenant
 \**Route: https://tenancy-management-be.onrender.com/tenants**\
