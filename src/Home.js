@@ -2,10 +2,10 @@ import React from 'react';
 
 function Home() {
     return (
-        <div>
+        <div id="description">
             <h3>Tenancy Management System</h3>
             <h4>You can use Tenancy Management System to keep and update tenants record</h4>
-            <h5> "Tenants" page
+            <h5> "Tenants" page</h5>
             <p>
                 You will see a list for all tenants with options for you to view selected tenant's details, edit selected tenant and delete selected tenant. 
                 When "view" is clicked, you will see a new page for this selected tenant's detials.
