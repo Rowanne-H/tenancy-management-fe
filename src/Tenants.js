@@ -12,11 +12,18 @@ function Tenants({ tenants, deleteTenant }) {
             return true
         }
     })
-    
+    .filter(tenant => 
+        tenant.ref.toLowerCase().includes(search)
+        || tenant.property.toLowerCase().includes(search) 
+        || tenant.fname.toLowerCase().includes(search)
+        || tenant.lname.toLowerCase().includes(search)
+        || tenant.mobile.toLowerCase().includes(search)
+        || tenant.email.toLowerCase().includes(search)
+    )    
     
     return (
         <div>
-            <input type="text" id="search" name="search" placeholder="search..." />
+            <input type="text" id="search" name="search" placeholder="search..." onChange={(e) => setSearch(e.target.value.toLowerCase())}/>
             <span>Active Tenants Only</span><input type="checkbox" checked={showActiveTenants} onChange={() => setShowActiveTenants(!showActiveTenants)}/>
             <table>
                 <tbody>
