@@ -12,7 +12,6 @@ A list for all tenants with options for you to view selected tenant's details, e
 \
 **Route: http://localhost:3000/tenants**
 \
-\
 **Route: http://localhost:3000/tenants**
 \
 When **"view"** is clicked, clients will be directed to a new page for this selected tenant's detials.
