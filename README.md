@@ -5,7 +5,6 @@ The Tenancy Management System is an app for clients to keep tenants records.
 A description for this app
 \
 **Route: https://tenancy-management-be.onrender.com/**
-\
 #### Tenants
 A list for all tenants with options for you to view selected tenant's details, edit selected tenant and delete selected tenant
 \
@@ -27,7 +26,6 @@ When **"Delete"** is clicked, this selected tenant will be deleted from the reco
 A form for clients to add new tenant. Once "Submit" button is clicked, this new tenant will be added to the record.
 \
 **Route: https://tenancy-management-be.onrender.com/tenants/new**
-\
 #### References
 1. Academic learning materials and Google
 2. StackOverflow
