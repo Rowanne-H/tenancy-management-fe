@@ -14,8 +14,6 @@ function EditTenantForm({ onUpdateTenant }) {
             });
     }, [])
 
-    if (!tenant) return <h3>Loading...</h3>
-
     function handleChange(e) {
         const key = e.target.name
         setTenant({
@@ -23,6 +21,8 @@ function EditTenantForm({ onUpdateTenant }) {
             [key]: e.target.value
         })
     }
+
+    if (!tenant) return <h3>Loading...</h3>
 
     function handleSubmit(e) {
         e.preventDefault();
@@ -63,10 +63,10 @@ function EditTenantForm({ onUpdateTenant }) {
             <label> Lease Term (months):
                 <input type="text" name="term" placeholder="e.g. 12" onChange={handleChange} value={tenant.term} />
             </label>
-            <label> Lease Start Date:
+            <label> Lease Start Date: {tenant.sdate}
                 <input type="date" name="sdate" onChange={handleChange} />
             </label>
-            <label> Lease End Date:
+            <label> Lease End Date: {tenant.edate}
                 <input type="date" name="edate" onChange={handleChange} />
             </label>
             <label> Note:
@@ -76,10 +76,7 @@ function EditTenantForm({ onUpdateTenant }) {
             <label> 
                 Active<input type="radio" name="status" value="Active" onChange={handleChange}/> 
                 Inactive<input type="radio" name="status" value="Inactive" onChange={handleChange}/>
-            </label>
-            
-                   
-            
+            </label>            
             <button id="submit">Save</button>
         </form>
     )

@@ -9,6 +9,7 @@ function TenantDetails() {
             .then(r => r.json())
             .then(tenant => setTenant(tenant));
     }, [])
+    
     if (!tenant) return <h3>Loading...</h3>
 
     return (
