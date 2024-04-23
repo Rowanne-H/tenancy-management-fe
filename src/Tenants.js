@@ -2,10 +2,11 @@ import React from 'react';
 import Tenant from './Tenant';
 
 function Tenants({ tenants, deleteTenant }) {
+    
     return (
         <div>
             <input type="text" id="search" name="search" placeholder="search..." />
-            <span>Inactive</span><input type="checkbox" value="Inactive" />
+            <span>Active Tenants Only</span><input type="checkbox" value="active" />
             <table>
                 <tbody>
                     <tr>
