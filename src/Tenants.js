@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Tenant from './Tenant';
 
 function Tenants({ tenants, deleteTenant }) {
+    const [search, setSearch] = useState('');
+    const [showActiveTenants, setShowActiveTenants] = useState(false);
+    const filteredTenants = tenants
+    .filter(tenant => {
+        if (showActiveTenants) {
+            return tenant.status === 'Active'
+        } else {
+            return true
+        }
+    })
+    
     
     return (
         <div>
             <input type="text" id="search" name="search" placeholder="search..." />
-            <span>Active Tenants Only</span><input type="checkbox" value="active" />
+            <span>Active Tenants Only</span><input type="checkbox" checked={showActiveTenants} onChange={() => setShowActiveTenants(!showActiveTenants)}/>
             <table>
                 <tbody>
                     <tr>
@@ -22,7 +33,7 @@ function Tenants({ tenants, deleteTenant }) {
                         <th>Status</th>
                         <th>More</th>
                     </tr>
-                    {tenants.map(tenant => <Tenant key={tenant.id} tenant={tenant} onDeleteTenant={deleteTenant} />)}
+                    {filteredTenants.map(tenant => <Tenant key={tenant.id} tenant={tenant} onDeleteTenant={deleteTenant} />)}
                 </tbody>
             </table>
         </div>
