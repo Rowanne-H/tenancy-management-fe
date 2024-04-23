@@ -7,6 +7,10 @@ A description for this app
 **Route: http://localhost:3000/**
 #### Tenants
 A list for all tenants with options for you to view selected tenant's details, edit selected tenant and delete selected tenant
+**Search** bar allow clients to filter tenants by their reference, property, firt name, last name, mobile and email and **"Active Tenants Only"** checkbox allow clients to show the active tenants only. 
+\
+**Route: http://localhost:3000/tenants**
+\
 \
 **Route: http://localhost:3000/tenants**
 \
