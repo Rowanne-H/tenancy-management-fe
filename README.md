@@ -21,7 +21,6 @@ When **"Edit"** is clicked, clients will be directed to a page with an edit form
 When **"Delete"** is clicked, this selected tenant will be deleted from the record.
 \
 **Route: https://tenancy-management-be.onrender.com/tenants**
-\
 #### Add New Tenant
 A form for clients to add new tenant. Once "Submit" button is clicked, this new tenant will be added to the record.
 \
