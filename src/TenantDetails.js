@@ -22,6 +22,7 @@ function TenantDetails() {
             <p>Lease Start Date: {tenant.sdate}</p>
             <p>Lease End Date: {tenant.edate}</p>
             <p>Note: {tenant.note}</p>
+            <p>Status: {tenant.status}</p>
         </div>
     )
 }
