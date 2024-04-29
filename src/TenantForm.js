@@ -33,22 +33,22 @@ function TenantForm({ onAddNewTenant }) {
     return (
         <form onSubmit={handleSubmit}>
             <label> Ref:
-                <input type="text" id="ref" placeholder="e.g. 123John" onChange={handleChange} />
+                <input type="text" id="ref" placeholder="e.g. 123John" onChange={handleChange} required/>
             </label>
             <label> Property:
-                <input type="text" id="property" placeholder="e.g. 123 StreetName Street Suburb NSW 1111" onChange={handleChange} />
+                <input type="text" id="property" placeholder="e.g. 123 StreetName Street Suburb NSW 1111" onChange={handleChange} required/>
             </label>
             <label> First Name:
-                <input type="text" id="fname" placeholder="e.g. John" onChange={handleChange} />
+                <input type="text" id="fname" placeholder="e.g. John" onChange={handleChange} required/>
             </label>
             <label> Last Name:
-                <input type="text" id="lname" placeholder="e.g. Doe" onChange={handleChange} />
+                <input type="text" id="lname" placeholder="e.g. Doe" onChange={handleChange} required/>
             </label>
             <label> Mobile:
-                <input type="tel" id="mobile" pattern="04[0-9]{8}" placeholder="e.g. 0400111000" onChange={handleChange} />
+                <input type="tel" id="mobile" pattern="04[0-9]{8}" placeholder="e.g. 0400111000" onChange={handleChange} required/>
             </label>
             <label> Email:
-                <input type="email" id="email" name="email" placeholder="e.g. hi@example.com" onChange={handleChange} />
+                <input type="email" id="email" name="email" placeholder="e.g. hi@example.com" onChange={handleChange} required/>
             </label>
             <label> Lease Term (months):
                 <input type="text" id="term" name="term" placeholder="e.g. 12" onChange={handleChange} />
