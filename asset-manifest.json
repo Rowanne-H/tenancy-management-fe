@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/tenancy-management-fe/static/css/main.980f3d83.css",
+    "main.js": "/tenancy-management-fe/static/js/main.ef59939d.js",
+    "static/js/453.b26a93dc.chunk.js": "/tenancy-management-fe/static/js/453.b26a93dc.chunk.js",
+    "index.html": "/tenancy-management-fe/index.html",
+    "main.980f3d83.css.map": "/tenancy-management-fe/static/css/main.980f3d83.css.map",
+    "main.ef59939d.js.map": "/tenancy-management-fe/static/js/main.ef59939d.js.map",
+    "453.b26a93dc.chunk.js.map": "/tenancy-management-fe/static/js/453.b26a93dc.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.980f3d83.css",
+    "static/js/main.ef59939d.js"
+  ]
+}
