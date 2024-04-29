@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 
 function TenantForm({ onAddNewTenant }) {
     let form = document.querySelector('form');
-    const [tenant, setTenant] = useState({status: "active"});
+    const [tenant, setTenant] = useState({status: "Active"});
 
     function handleChange(e) {
         const key = e.target.id
