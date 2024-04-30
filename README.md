@@ -29,9 +29,10 @@ When **"Delete"** is clicked, this selected tenant will be deleted from the reco
 A form for clients to add new tenant. Once "Submit" button is clicked, this new tenant will be added to the record.
 \
 **Route: http://localhost:3000/tenants/new**
+####Github page
 \
 **Github page:https://rowanne-h.github.io/tenancy-management-fe/**
-\
+
 #### References
 1. Academic learning materials and Google
 2. StackOverflow
