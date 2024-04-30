@@ -30,7 +30,6 @@ A form for clients to add new tenant. Once "Submit" button is clicked, this new 
 \
 **Route: http://localhost:3000/tenants/new**
 #### Github page
-\
 **Github page:https://rowanne-h.github.io/tenancy-management-fe/**
 
 #### References
